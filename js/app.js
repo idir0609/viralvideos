@@ -8,9 +8,9 @@ $(function() {
             part: "snippet",
             type: "video",
             q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
-            maxResults: 3,
-            order: "viewCount",
-            publishedAfter: "2015-01-01T00:00:00Z"
+            maxResults: 50,
+            order: "date"
+            
        }); 
        // execute the request
        request.execute(function(response) {
@@ -33,7 +33,7 @@ function resetVideoHeight() {
 }
 
 function init() {
-    gapi.client.setApiKey("YOUR_PUBLIC_KEY");
+    gapi.client.setApiKey("AIzaSyBNAkb86snLJdii_8XX2DZti2FBQ0xn8JE");
     gapi.client.load("youtube", "v3", function() {
         // yt api is ready
     });
